@@ -1,6 +1,6 @@
 {
 
-function playGame(playerInput){
+let playGame = function (playerInput){
 
   let randomNumber = Math.floor(Math.random() * 3 + 1),
       computerMove = getMoveName(randomNumber),
@@ -8,7 +8,7 @@ function playGame(playerInput){
 
   clearMessages();
 
-  function getMoveName(argMoveId){
+    function getMoveName(argMoveId){
     if(argMoveId == 1){
       return 'kamien';
     } else if (argMoveId == 2) {
@@ -20,7 +20,7 @@ function playGame(playerInput){
     return 'nieznany ruch';
   }
 
-  function displayResult(argComputerMove, argPlayerMove){
+  let displayResult = function (argComputerMove, argPlayerMove){
 
     if (argComputerMove == 'kamien' && argPlayerMove == 'papier'){
       printMessage('Ty wygrywasz!');
